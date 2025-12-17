@@ -1,0 +1,134 @@
+---
+import OklusIcon from "../assets/OklusIcon.svg?raw";
+
+---
+
+<footer class="border-t border-slate-200 bg-slate-50 py-12">
+    <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-8 md:grid-cols-3">
+            <!-- Brand -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="flex h-10 w-10 items-center justify-center rounded-xl [&_svg]:h-5 [&_svg]:w-auto"
+                    >
+                        <div
+                            role="img"
+                            aria-label="Oklus"
+                            set:html={OklusIcon}
+                        ></div>
+                    </div>
+                    <div class="text-xl font-extrabold text-slate-900">
+                        Oklus
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed text-slate-600">
+                    Software de flujo diario para clínicas dentales pequeñas.
+                    Solo agenda, pacientes e historial. Sin facturación ni ERP.
+                </p>
+                <div class="flex items-center gap-2 text-sm">
+                    <span
+                        class="inline-flex items-center gap-1 rounded-full border border-teal-200 bg-teal-50 px-3 py-1 font-semibold text-teal-700"
+                    >
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-600 opacity-75"
+                            ></span>
+                            <span
+                                class="relative inline-flex h-2 w-2 rounded-full bg-teal-600"
+                            ></span>
+                        </span>
+                        Beta cerrada activa
+                    </span>
+                </div>
+            </div>
+
+            <!-- Product -->
+            <div class="space-y-4">
+                <h3
+                    class="text-sm font-bold uppercase tracking-wider text-slate-900"
+                >
+                    Producto
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600">
+                    <li>
+                        <button
+                            onclick="scrollToForm()"
+                            class="transition hover:text-teal-600 hover:underline"
+                        >
+                            Solicitar acceso
+                        </button>
+                    </li>
+                    <li class="cursor-not-allowed opacity-50">
+                        Funcionalidades
+                    </li>
+                    <li class="cursor-not-allowed opacity-50">
+                        Precios (próximamente)
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Info -->
+            <div class="space-y-4">
+                <h3
+                    class="text-sm font-bold uppercase tracking-wider text-slate-900"
+                >
+                    Beta cerrada
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600">
+                    <li class="flex items-center gap-2">
+                        <svg
+                            class="h-4 w-4 text-teal-600"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        Gratis durante beta
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg
+                            class="h-4 w-4 text-teal-600"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        Respuesta en 24h
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg
+                            class="h-4 w-4 text-teal-600"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        Beneficios por ser parte de la lista
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="mt-12 border-t border-slate-200 pt-8">
+            <div
+                class="flex flex-col items-center justify-between gap-4 text-sm text-slate-600 md:flex-row"
+            >
+                <p>2025 Oklus. Beta cerrada. Producto de pago después.</p>
+                <p class="text-xs">
+                    Hecho con cuidado para clínicas pequeñas de Ecuador.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

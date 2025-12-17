@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve text rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Focus visible improvements for accessibility */
+*:focus-visible {
+    outline: 2px solid theme('colors.teal.500');
+    outline-offset: 2px;
+}
+
+/* Better tap highlights on mobile */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Lightbox animations */
+#image-lightbox {
+    transition: opacity 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Form feedback animations */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInScale 0.4s ease-out;
+}
+
+@keyframes bounceOnce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.15);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    75% {
+        transform: scale(1.05);
+    }
+}
+
+.animate-bounce-once {
+    animation: bounceOnce 0.6s ease-out 0.2s;
+}
+
+/* Product image cursor hint */
+.product-image {
+    cursor: zoom-in;
+}
+
+/* Email validation error */
+input.border-red-500 {
+    border-color: #ef4444 !important;
+}
+
+input.border-red-500:focus {
+    border-color: #dc2626 !important;
+    ring-color: rgba(239, 68, 68, 0.2) !important;
+}

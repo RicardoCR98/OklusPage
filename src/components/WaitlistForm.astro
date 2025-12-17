@@ -1,0 +1,324 @@
+---
+
+---
+
+<section class="scroll-mt-20" id="waitlist-form">
+    <div class="mx-auto max-w-3xl">
+        <!-- Encabezado simplificado -->
+        <div class="mb-8 text-center">
+            <h2 class="mb-3 text-4xl font-extrabold text-slate-900 md:text-5xl">
+                Lista de espera
+            </h2>
+            <p class="text-lg text-slate-700">Lanzamiento 2026.</p>
+        </div>
+
+        <!-- Formulario mejorado -->
+        <div
+            class="relative rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-xl shadow-slate-900/5 md:p-10"
+        >
+            <!-- Badge flotante -->
+            <div class="absolute -right-4 -top-4 rotate-12">
+                <div
+                    class="rounded-xl bg-linear-to-br from-amber-400 to-amber-600 px-4 py-2 text-sm font-extrabold text-white shadow-lg"
+                >
+                    Sin tarjeta
+                </div>
+            </div>
+
+            <form id="waitlist-form-element" class="space-y-6">
+                <!-- Email -->
+                <div class="space-y-2">
+                    <label
+                        for="email"
+                        class="block text-sm font-bold text-slate-900"
+                    >
+                        Email
+                        <span class="text-red-600">*</span>
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tu-email@clinica.com"
+                        required
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                        title="Por favor ingresa un email válido (ejemplo: tu-email@clinica.com)"
+                        class="w-full rounded-xl border-2 border-slate-300 bg-white px-5 py-4 text-base font-medium text-slate-900 placeholder:text-slate-400 transition focus:border-teal-600 focus:outline-none focus:ring-4 focus:ring-teal-100"
+                    />
+                    <p
+                        id="email-error"
+                        class="hidden text-sm text-red-600 font-medium"
+                    >
+                        Por favor ingresa un email válido
+                    </p>
+                </div>
+
+                <!-- Grid de 2 columnas -->
+                <div class="grid gap-6 md:grid-cols-2">
+                    <!-- Tamaño clínica -->
+                    <div class="space-y-2">
+                        <label
+                            for="clinic-size"
+                            class="block text-sm font-bold text-slate-900"
+                        >
+                            Dentistas
+                            <span class="text-red-600">*</span>
+                        </label>
+                        <select
+                            id="clinic-size"
+                            name="clinic-size"
+                            required
+                            class="w-full rounded-xl border-2 border-slate-300 bg-white px-5 py-4 text-base font-medium text-slate-900 transition focus:border-teal-600 focus:outline-none focus:ring-4 focus:ring-teal-100"
+                        >
+                            <option value="">Selecciona...</option>
+                            <option value="1 dentista">1 dentista</option>
+                            <option value="2 dentistas">2 dentistas</option>
+                            <option value="3+ dentistas">3+ dentistas</option>
+                        </select>
+                    </div>
+
+                    <!-- Nombre clínica -->
+                    <div class="space-y-2">
+                        <label
+                            for="clinic-name"
+                            class="block text-sm font-bold text-slate-900"
+                        >
+                            Clínica
+                        </label>
+                        <input
+                            type="text"
+                            id="clinic-name"
+                            name="clinic-name"
+                            placeholder="Nombre de tu clínica"
+                            class="w-full rounded-xl border-2 border-slate-300 bg-white px-5 py-4 text-base font-medium text-slate-900 placeholder:text-slate-400 transition focus:border-teal-600 focus:outline-none focus:ring-4 focus:ring-teal-100"
+                        />
+                    </div>
+                </div>
+
+                <!-- CTA principal -->
+                <div class="space-y-4 pt-2">
+                    <button
+                        type="submit"
+                        class="group relative w-full overflow-hidden rounded-xl bg-teal-600 px-8 py-5 text-lg font-bold text-white shadow-xl shadow-teal-600/30 transition hover:bg-teal-700 hover:shadow-2xl hover:shadow-teal-600/40 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-200"
+                    >
+                        <span
+                            class="relative z-10 flex items-center justify-center gap-2"
+                        >
+                            Avisame cuando esté disponible
+                            <svg
+                                class="h-5 w-5 transition-transform group-hover:translate-x-1"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </span>
+                        <div
+                            class="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full"
+                        >
+                        </div>
+                    </button>
+
+                    <p class="text-center text-sm text-slate-600">
+                        Te avisamos cuando esté disponible.
+                    </p>
+                </div>
+            </form>
+
+            <!-- Success Message (hidden by default) - FUERA del form -->
+            <div id="success-message" class="hidden space-y-6">
+                <div
+                    class="rounded-xl border-2 border-teal-200 bg-teal-50 p-8 text-center"
+                >
+                    <div class="mb-4 flex justify-center">
+                        <svg
+                            class="h-16 w-16 text-teal-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="mb-3 text-2xl font-extrabold text-slate-900">
+                        ¡Gracias!
+                    </h3>
+                    <p class="text-lg text-slate-700">
+                        Te avisaremos cuando Oklus esté disponible.
+                    </p>
+                </div>
+
+                <button
+                    id="send-again-btn"
+                    type="button"
+                    class="group relative w-full overflow-hidden rounded-xl bg-teal-600 px-8 py-5 text-lg font-bold text-white shadow-xl shadow-teal-600/30 transition hover:bg-teal-700 hover:shadow-2xl hover:shadow-teal-600/40 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-200"
+                >
+                    <span
+                        class="relative z-10 flex items-center justify-center gap-2"
+                        >Registrar otro email</span
+                    >
+                </button>
+            </div>
+
+            <!-- Error Message (hidden by default) - FUERA del form -->
+            <div
+                id="error-message"
+                class="hidden rounded-xl border-2 border-red-200 bg-red-50 p-6 text-center animate-fade-in"
+            >
+                <div class="mb-3 flex justify-center">
+                    <svg
+                        class="h-12 w-12 text-red-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                    </svg>
+                </div>
+                <h3 class="mb-2 text-xl font-extrabold text-slate-900">
+                    Algo salió mal
+                </h3>
+                <p class="text-base text-slate-700">
+                    Por favor intenta de nuevo o contáctanos directamente.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const form = document.getElementById(
+        "waitlist-form-element",
+    ) as HTMLFormElement;
+    const successMessage = document.getElementById("success-message");
+    const errorMessage = document.getElementById("error-message");
+    const submitButton = form?.querySelector(
+        'button[type="submit"]',
+    ) as HTMLButtonElement;
+    const emailInput = document.getElementById("email") as HTMLInputElement;
+    const emailError = document.getElementById("email-error");
+    const sendAgainBtn = document.getElementById("send-again-btn");
+
+    // Google Apps Script Web App URL
+    const WEBHOOK_URL =
+        "https://script.google.com/macros/s/AKfycbyRkt-uef9TL5zyYcN_n3-vJ9F4OuwVHWJuO9Uc3L6K7LGaZUzkevZD3ejOaAiILnojeQ/exec";
+
+    // Guardar el HTML original del botón
+    const originalButtonText = submitButton.innerHTML;
+
+    // Botón para volver a mostrar el formulario
+    sendAgainBtn?.addEventListener("click", () => {
+        successMessage?.classList.add("hidden");
+        errorMessage?.classList.add("hidden");
+        form.classList.remove("hidden");
+        form.reset();
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+    });
+
+    // Validación de email en tiempo real
+    emailInput?.addEventListener("blur", () => {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (emailInput.value && !emailRegex.test(emailInput.value)) {
+            emailInput.classList.add("border-red-500");
+            emailInput.classList.remove("border-slate-300");
+            emailError?.classList.remove("hidden");
+        } else {
+            emailInput.classList.remove("border-red-500");
+            emailInput.classList.add("border-slate-300");
+            emailError?.classList.add("hidden");
+        }
+    });
+
+    form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Validar email antes de enviar
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(emailInput.value)) {
+            emailInput.classList.add("border-red-500");
+            emailError?.classList.remove("hidden");
+            emailInput.focus();
+            return;
+        }
+
+        // Disable button and show loading state
+        submitButton.disabled = true;
+        submitButton.innerHTML = `
+            <span class="relative z-10 flex items-center justify-center gap-2">
+                <svg class="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Enviando...
+            </span>
+        `;
+
+        // Get form data
+        const formData = new FormData(form);
+
+        // Usar URLSearchParams para evitar CORS preflight
+        const data = new URLSearchParams({
+            timestamp: new Date().toISOString(),
+            email: formData.get("email") as string,
+            clinicSize: formData.get("clinic-size") as string,
+            clinicName:
+                (formData.get("clinic-name") as string) || "No proporcionado",
+        });
+
+        try {
+            const response = await fetch(WEBHOOK_URL, {
+                method: "POST",
+                mode: "no-cors", // Evita preflight CORS
+                body: data,
+            });
+
+            // Ocultar formulario y mostrar mensaje de éxito
+            form.classList.add("hidden");
+            successMessage?.classList.remove("hidden");
+
+            // Scroll to success message
+            successMessage?.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+
+            // Optional: Track conversion (Google Analytics, etc.)
+            if (typeof (window as any).gtag !== "undefined") {
+                (window as any).gtag("event", "form_submit", {
+                    event_category: "waitlist",
+                    event_label: "waitlist_form",
+                });
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+
+            // Ocultar formulario y mostrar error
+            form.classList.add("hidden");
+            errorMessage?.classList.remove("hidden");
+
+            // Después de 3 segundos, volver a mostrar el formulario
+            setTimeout(() => {
+                errorMessage?.classList.add("hidden");
+                form.classList.remove("hidden");
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            }, 1000);
+        }
+    });
+</script>
