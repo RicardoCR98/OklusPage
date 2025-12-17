@@ -1,11 +1,48 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import TechSpecs from "@components/TechSpecs.astro";
+import Problem from "@components/Problem.astro";
+import Highlight from "@components/Highlight.astro";
+import Features from "@components/Features.astro";
+import Benefits from "@components/Benefits.astro";
+import WaitlistForm from "@components/WaitlistForm.astro";
+import FinalCTA from "@components/FinalCTA.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+    title="Oklus - Software dental sin el drama | Beta cerrada"
+    description="Software de flujo diario para clínicas dentales pequeñas. Solo agenda, pacientes e historial. Sin facturación ni ERP. Beta cerrada gratis. Producto de pago después."
+>
+    <Hero />
+    <Problem />
+    <TechSpecs />
+    <Features />
+    <WaitlistForm />
+    <Benefits />
+    <FinalCTA />
 </Layout>
+
+<script>
+    function scrollToForm() {
+        const form = document.getElementById("waitlist-form");
+        if (form) {
+            form.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+
+            // Focus en el email después del scroll
+            setTimeout(() => {
+                const emailInput = document.getElementById(
+                    "email",
+                ) as HTMLInputElement;
+                if (emailInput) {
+                    emailInput.focus();
+                }
+            }, 500);
+        }
+    }
+
+    (window as any).scrollToForm = scrollToForm;
+</script>
