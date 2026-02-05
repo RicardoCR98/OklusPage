@@ -18,6 +18,15 @@ const { title, description } = Astro.props;
         <title>{title}</title>
         <meta name="description" content={description} />
 
+        <!-- SEO Keywords -->
+        <meta name="keywords" content="software dental Ecuador, sistema gestión clínica dental, agenda pacientes dentales, software odontológico pequeñas clínicas, historial clínico digital, software consultorio dental, programa dentistas Ecuador, sistema dental sin internet, software clínica dental Quito, software clínica dental Guayaquil" />
+        <meta name="author" content="Oklus" />
+        <link rel="canonical" href="https://oklus.com" />
+
+        <!-- Geo-targeting -->
+        <meta name="geo.region" content="EC" />
+        <meta name="geo.placename" content="Ecuador" />
+
         <!-- Preconnect for performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,6 +40,13 @@ const { title, description } = Astro.props;
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:url" content="https://oklus.com" />
+        <meta property="og:locale" content="es_EC" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
 
         <!-- Theme color for mobile browsers -->
         <meta name="theme-color" content="#0d9488" />

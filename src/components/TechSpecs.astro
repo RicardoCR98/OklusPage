@@ -16,28 +16,31 @@
         </div>
 
         <!-- Grid de specs -->
-        <div class="grid gap-6 md:grid-cols-3">
-            <!-- Plataformas -->
-            <div class="rounded-2xl border-2 border-slate-200 bg-white p-6">
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Sin internet -->
+            <div class="rounded-2xl border-2 border-teal-200 bg-teal-50 p-6">
                 <div class="mb-4 flex items-center gap-3">
                     <svg
-                        class="h-8 w-8 text-slate-700"
-                        fill="currentColor"
+                        class="h-8 w-8 text-teal-600"
+                        fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
                     >
                         <path
-                            d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"
-                        ></path>
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2.5"
+                            d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
                     </svg>
                     <h3 class="text-xl font-extrabold text-slate-900">
-                        Multiplataforma
+                        Sin internet
                     </h3>
                 </div>
                 <p class="text-base font-semibold text-slate-700">
-                    Windows, macOS, Linux.
+                    Funciona offline.
                 </p>
                 <p class="mt-2 text-sm text-slate-600">
-                    Un único instalador por sistema.
+                    Tus datos en tu PC. Siempre disponibles.
                 </p>
             </div>
 
@@ -89,10 +92,34 @@
                     </h3>
                 </div>
                 <p class="text-base font-semibold text-slate-700">
-                    Aproximadamente 80MB.
+                    ~20MB de RAM.
                 </p>
                 <p class="mt-2 text-sm text-slate-600">
-                    Liviano. Corre en cualquier PC.
+                    Más liviano que Chrome con 2 pestañas.
+                </p>
+            </div>
+
+            <!-- Plataformas -->
+            <div class="rounded-2xl border-2 border-slate-200 bg-white p-6">
+                <div class="mb-4 flex items-center gap-3">
+                    <svg
+                        class="h-8 w-8 text-slate-700"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"
+                        ></path>
+                    </svg>
+                    <h3 class="text-xl font-extrabold text-slate-900">
+                        Multiplataforma
+                    </h3>
+                </div>
+                <p class="text-base font-semibold text-slate-700">
+                    Windows, macOS, Linux.
+                </p>
+                <p class="mt-2 text-sm text-slate-600">
+                    Un único instalador por sistema.
                 </p>
             </div>
         </div>
