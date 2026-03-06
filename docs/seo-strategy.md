@@ -1,6 +1,26 @@
 # Estrategia SEO para Oklus
 
-## ✅ Lo que YA hicimos
+> Última actualización: 2026-03-04
+
+## ✅ Cambios técnicos aplicados (2026-03-04)
+
+### Correcciones críticas (bloqueaban la indexación)
+
+- **Canonical corregido:** de `https://oklus.com` → `https://oklus.pages.dev` (`Layout.astro:24`) — este era el problema principal de no-indexación
+- **Meta tag verificación Google añadido:** `Layout.astro:27`
+- **OG URL corregida + og:image añadida:** `Layout.astro:46-49`
+- **`public/sitemap.xml` creado**
+- **`public/robots.txt` creado**
+
+> Nota pendiente: crear `public/og-image.png` (1200×630px) para que el og:image sea funcional en redes sociales.
+
+### Próximos pasos técnicos
+1. Deploy del código actualizado a Cloudflare Pages
+2. Verificar propiedad en Google Search Console con el meta tag ya insertado
+3. Enviar sitemap en GSC → Sitemaps → `sitemap.xml`
+4. Solicitar indexación manual de la URL raíz vía "Inspección de URLs"
+
+---
 
 ### Meta Tags Optimizados
 
