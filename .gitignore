@@ -26,3 +26,5 @@ pnpm-debug.log*
 .vscode/
 
 AGENTS.md
+CLAUDE.md
+pnpm-lock.yaml
